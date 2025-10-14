@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Use Protection to Safely Get Vitamin D From Sunlight - Healthline</title>
+  <link href="https://fonts.googleapis.com/css2?family=Georgia&display=swap" rel="stylesheet">
+  <style>
+    body {
+      font-family: 'Georgia', serif;
+      margin: 0;
+      padding: 40px;
+      max-width: 700px;
+      margin-left: auto;
+      margin-right: auto;
+      background-color: #ffffff;
+      color: #111;
+    }
+    .logo {
+      text-align: left;
+      margin-bottom: 2px;
+    }
+    .logo img {
+      max-width: 30%;
+      height: auto;
+    }
+    h1 {
+      font-size: 30px;
+      font-weight: bold;
+      margin-bottom: 10px;
+    }
+    .meta {
+      font-size: 14px;
+      color: #555;
+      margin-bottom: 30px;
+    }
+    .subhead {
+      font-weight: bold;
+      margin-top: 20px;
+      margin-bottom: 10px;
+    }
+    p {
+      line-height: 1.6;
+      margin-bottom: 20px;
+    }
+    .share-link {
+      color: #326891;
+      font-size: 13px;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+      text-decoration: none;
+      display: inline-block;
+      margin-top: 5px;
+    }
+  </style>
+</head>
+<body>
+  <div class="logo">
+    <img src="healthline-logo.png" alt="Healthline Logo">
+  </div>
+  <h1>Use Protection to Safely Get Vitamin D From Sunlight</h1>
+
+
+  <p>There’s good reason why vitamin D is called “the sunshine vitamin.” When your skin is exposed to sunlight, it makes vitamin D from cholesterol. The sun’s ultraviolet B (UVB) rays hit cholesterol in the skin cells, providing the energy for vitamin D synthesis to occur.
+
+Vitamin D has many roles in the body and is essential for optimal health.</p>
+  <p>While sunlight is great for vitamin D production, too much can be dangerous. Some negative consequences are: sunburns, eye damage, aging skin and even skin cancer</p>
+  <p>If you plan on spending a lot of time in the sun, make sure to avoid getting sunburned. It’s best to apply sunscreen after 10–30 minutes of unprotected sun exposure to avoid the harmful consequences of excess sunlight. Your exposure time should depend on how sensitive your skin is to sunlight. Note that experts recommend reapplying sunscreen every two to three hours you spend in the sun, especially if you’re sweating or bathing.</p>
+  <br>
+  <p style="text-transform: uppercase; color: darkblue; margin-bottom: 30px;">
+  You may now close this tab and return to the survey  
+  </p>
+<script>
+  const params = new URLSearchParams(window.location.search);
+  const prolific_pid = params.get("prolific_pid");
+  const condition = params.get("condition");
+  const page_name = params.get("page_name");
+
+  // Replace visible URL to hide condition and page_name
+  if (prolific_pid) {
+    const cleanUrl = window.location.origin + window.location.pathname + "?prolific_pid=" + encodeURIComponent(prolific_pid);
+    window.history.replaceState({}, document.title, cleanUrl);
+  }
+
+  const entryTime = new Date();
+
+  const entryIds = {
+    prolific_pid: "entry.434492044",
+    condition: "entry.1225575535",
+    page_name: "entry.925161350",
+    entry_time: "entry.732388184",
+    exit_time: "entry.372350073",
+    time_spent: "entry.298480214"
+  };
+
+  window.addEventListener("unload", function () {
+    const exitTime = new Date();
+    const timeSpent = Math.round((exitTime - entryTime) / 1000);
+
+    const formData = new FormData();
+    formData.append(entryIds.prolific_pid, prolific_pid);
+    formData.append(entryIds.condition, condition);
+    formData.append(entryIds.page_name, page_name);
+    formData.append(entryIds.entry_time, entryTime.toISOString());
+    formData.append(entryIds.exit_time, exitTime.toISOString());
+    formData.append(entryIds.time_spent, timeSpent);
+
+    navigator.sendBeacon(
+      https://docs.google.com/forms/d/e/1FAIpQLSejFwFYfb78Rkv92gxAFIWeTncFhEXpnMxnrFE-s-GLKWZ2NA/formResponse",
+      new URLSearchParams(formData)
+    );
+  });
+</script>
+
+
+</body>
+</html>
